@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Регистрация пользователя</title>
+    <title>Контакты</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('2.jpg') no-repeat center center fixed;
+            background: url('background.jpg') no-repeat center center fixed;
             background-size: cover;
             display: flex;
             justify-content: center;
@@ -30,19 +30,24 @@
         .header button {
             margin: 0 10px;
         }
-        .registration-container {
+        .contact-container {
             background-color: rgba(255, 255, 255, 0.9);
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            width: 90%;
+            height: 90%;
             text-align: center;
             margin-top: 150px; /* Центрирование по вертикали */
         }
         h2 {
             margin-bottom: 20px;
         }
-        input[type="text"], input[type="email"], input[type="password"] {
+        p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="email"], textarea {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
@@ -50,8 +55,7 @@
             border-radius: 5px;
         }
         button {
-            width: 100%;
-            padding: 10px;
+            padding: 10px 20px;
             border: none;
             border-radius: 5px;
             background-color: #007BFF;
@@ -74,17 +78,18 @@
 <body>
 <div class="header">
     <button onclick="window.location.href='index.html'">Главная</button>
+    <button onclick="window.location.href='registration.html'">Регистрация</button>
     <button onclick="window.location.href='map.html'">Карта</button>
     <button onclick="window.location.href='attractions.html'">Достопримечательности</button>
-    <button onclick="window.location.href='contacts.html'">Контакты</button>
 </div>
-<div class="registration-container">
-    <h2>Регистрация пользователя</h2>
+<div class="contact-container">
+    <h2>Контакты</h2>
+    <p>Если у вас есть вопросы, свяжитесь с нами по электронной почте: writeMe@mail.com</p>
     <form>
-        <input type="text" name="username" placeholder="Имя пользователя" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="password" name="password" placeholder="Пароль" required>
-        <button type="submit">Регистрация</button>
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="email" name="email" placeholder="Ваш email" required>
+        <textarea name="message" rows="4" placeholder="Ваше сообщение" required></textarea>
+        <button type="submit">Отправить</button>
     </form>
     <button class="home-button" onclick="window.location.href='index.html'">Главная</button>
 </div>

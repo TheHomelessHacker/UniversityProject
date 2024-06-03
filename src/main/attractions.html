@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Исторический Визуализатор г. Вологды</title>
+    <title>Достопримечательности</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('1.jpg') no-repeat center center fixed;
+            background: url('background.jpg') no-repeat center center fixed;
             background-size: cover;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
         }
         .header {
@@ -30,60 +30,49 @@
         .header button {
             margin: 0 10px;
         }
-        .welcome-container {
+        .content-container {
             background-color: rgba(255, 255, 255, 0.9);
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            text-align: center;
+            width: 90%;
+            height: 90%;
             margin-top: 150px; /* Центрирование по вертикали */
+            overflow-y: auto; /* Позволяет прокручивать содержимое */
         }
-        h1, h2 {
+        h2 {
             margin-bottom: 20px;
         }
-        button {
+        p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+        .home-button {
+            margin-top: 10px;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
-            background-color: #007BFF;
+            background-color: #6c757d;
             color: white;
             font-size: 16px;
             cursor: pointer;
         }
-        button:hover {
-            background-color: #0056b3;
-        }
-        .map-button {
-            background-color: #28a745;
-        }
-        .map-button:hover {
-            background-color: #218838;
-        }
-        .attractions-button {
-            background-color: #ffc107;
-        }
-        .attractions-button:hover {
-            background-color: #e0a800;
-        }
-        .contacts-button {
-            background-color: #17a2b8;
-        }
-        .contacts-button:hover {
-            background-color: #117a8b;
+        .home-button:hover {
+            background-color: #5a6268;
         }
     </style>
 </head>
 <body>
 <div class="header">
+    <button onclick="window.location.href='index.html'">Главная</button>
     <button onclick="window.location.href='registration.html'">Регистрация</button>
-    <button class="map-button" onclick="window.location.href='map.html'">Карта</button>
-    <button class="attractions-button" onclick="window.location.href='attractions.html'">Достопримечательности</button>
-    <button class="contacts-button" onclick="window.location.href='contacts.html'">Контакты</button>
+    <button onclick="window.location.href='map.html'">Карта</button>
+    <button onclick="window.location.href='contacts.html'">Контакты</button>
 </div>
-<div class="welcome-container">
-    <h1>Добро Пожаловать на сайт</h1>
-    <h2>Исторический Визуализатор г. Вологды</h2>
+<div class="content-container">
+    <h2>Достопримечательности Вологды</h2>
+    <p>Здесь будет описание достопримечательностей Вологды.</p>
+    <button class="home-button" onclick="window.location.href='index.html'">Главная</button>
 </div>
 </body>
 </html>
